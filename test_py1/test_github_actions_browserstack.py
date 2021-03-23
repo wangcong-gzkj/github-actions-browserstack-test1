@@ -14,9 +14,9 @@ caps = [
 username =  'wangcong1'
 accessKey = 'cDEx8QD3UMfxCnVuAE9H'
 
-def test(cap):
+def test_t1(cap):
     driver = webdriver.Remote('https://'+username+':'+accessKey+'@hub-cloud.browserstack.com/wd/hub', desired_capabilities=cap)
     driver.get('https://www.google.com')
 
 for cap in caps:
-    Thread(target=test, args=(cap,)).start()  
+    Thread(target=test_t1, args=(cap,)).start()  
